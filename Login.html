@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    .textcolour{
+        color: red; 
+
+    }
+    .container{
+        background-color: #6163ff;
+            border: 1px solid #ff0000;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        position: absolute;
+            top: 40%;
+            left: 40%;
+
+    }
+    .head{
+        text-align: center;
+        top: 25%;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 30px;
+    }
+
+
+</style>
+<head>
+    <title>Login</title>
+</head>
+
+<body>
+<div class="head">
+<h2>Please login</h2>
+</div>
+<div class="container">
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <button onclick="loginCheck()">Login</button>
+
+    <p id="loginChecked"></p>
+
+    </body>
+
+<script>
+
+function loginCheck() {
+    const username = "Amiral"
+    const password = "N3lS0n"
+    const inputUsername = document.getElementById("username").value;
+    const inputPassword = document.getElementById("password").value;
+    if (inputUsername==username && inputPassword==password) {
+        document.getElementById("loginChecked").innerHTML = "You may enter!";
+        window.location.href = "Home-store.html"
+    }
+    else {
+        document.getElementById("loginChecked").innerHTML = "Invalid login details";
+            
+
+    }
+}
+</script>
+
+</div>
+
+    </body>
+</html>
